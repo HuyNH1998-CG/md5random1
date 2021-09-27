@@ -29,6 +29,9 @@ export class CreateComponent implements OnInit {
   }
 
   create(){
+    if(this.form.invalid){
+      return
+    }
     const account = this.form.value;
     this.accountService.register(account);
     this.router.navigate(['/account/list'])

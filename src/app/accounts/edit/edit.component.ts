@@ -46,6 +46,9 @@ export class EditComponent implements OnInit {
   }
 
   editAccount(id:number){
+    if(this.form.invalid){
+      return
+    }
     const account = this.form.value;
     this.accountService.updateAccount(id,account);
     this.router.navigate(['/account/list'])

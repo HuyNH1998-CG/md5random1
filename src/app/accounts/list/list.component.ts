@@ -19,4 +19,9 @@ export class ListComponent implements OnInit {
   getData(){
     this.accounts = this.accountservice.accounts;
   }
+
+  deleteAccount(id:number|undefined){
+    this.accountservice.deleteAccount(id!);
+    this.getData()
+  }
 }

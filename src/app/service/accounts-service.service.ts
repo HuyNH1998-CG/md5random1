@@ -40,7 +40,7 @@ export class AccountsServiceService {
 
   deleteAccount(id: number) {
     this.accounts = this.accounts.filter(accounts => {
-      return accounts.id !== id
+      return accounts.id != id
     })
   }
 }
