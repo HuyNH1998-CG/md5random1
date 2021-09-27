@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Account List</h1>
+  <a routerLink="/account/create" class="btn btn-primary">Create Account</a>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>UserName</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Owner</th>
+      <th colspan="2"></th>
+    </tr>
+    <tr *ngFor="let acc of accounts">
+      <td>{{acc.id}}</td>
+      <td>{{acc.username}}</td>
+      <td>{{acc.password}}</td>
+      <td>{{acc.email}}</td>
+      <td>{{acc.name}}</td>
+      <td>
+        <a [routerLink]="['/account/edit',acc.id]" class="btn btn-warning">Edit</a>
+        <a [routerLink]="['/account/delete',acc.id]" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+  </table>
+</div>

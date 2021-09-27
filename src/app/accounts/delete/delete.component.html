@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Delete Account</h1>
+  <form [formGroup]="form" (ngSubmit)="delete()">
+    <table>
+      <tr>
+        <td>Username</td>
+        <td><input type="text" formControlName="username" readonly></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" formControlName="password" readonly></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" formControlName="email" readonly></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" formControlName="name" readonly></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit">Delete</button></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+</div>

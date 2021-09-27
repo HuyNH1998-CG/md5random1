@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Create Account</h1>
+  <form [formGroup]="form" (ngSubmit)="editAccount(id!)">
+    <table>
+      <tr>
+        <td>Username</td>
+        <td><input type="text" formControlName="username"></td>
+        <td><p *ngIf="theform.username.touched && theform.username.errors">
+          <span *ngIf="theform.username.errors.required" style="color: red">Username is required</span>
+          <span *ngIf="theform.username.errors.minlength" style="color: red">Username is must be longer than 6</span>
+        </p></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" formControlName="password"></td>
+        <td><p *ngIf="theform.password.touched && theform.password.errors">
+          <span *ngIf="theform.password.errors.required" style="color: red">Password is required</span>
+          <span *ngIf="theform.password.errors.minlength" style="color: red">Password is must be longer than 6</span>
+        </p></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" formControlName="email"></td>
+        <td><p *ngIf="theform.email.touched && theform.email.errors">
+          <span *ngIf="theform.email.errors.required" style="color: red">Email is required</span>
+          <span *ngIf="theform.email.errors.email" style="color: red">Email is must be longer than 6</span>
+        </p></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" formControlName="name"></td>
+        <td><p *ngIf="theform.name.touched && theform.name.errors">
+          <span *ngIf="theform.name.errors.required" style="color: red">Name is required</span>
+        </p></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit">Edit</button></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+</div>
